@@ -6,12 +6,7 @@ const submit = $('#submitButton');
 const inputWeight = $('#inputWeight');
 const inputHeight = $('#inputHeight');
 const canvas = $('#pixelCanvas');
-
-
-submit.on("click",function(evt) {
-	evt.preventDefault(); // Prevents the input field from getting reset
-	makeGrid();
-});
+const pixelColor = $('#colorPicker');
 
 function makeGrid() {
 	canvas.empty();
@@ -25,12 +20,18 @@ function makeGrid() {
 	};
 };
 
+submit.on("click",function(evt) {
+	evt.preventDefault(); // Prevents the input field from getting reset
+	makeGrid();
+});
+
 canvas.on("click",".grid-cell",function(event) {
-	let cellColor = 'blue';
+	let cellColor = pixelColor.val();
 	let currentCell = $(event.target);
 	if (currentCell.attr('bgcolor')==='white') {
 		currentCell.attr('bgcolor',cellColor);
 	} else {
 		currentCell.attr('bgcolor','white');
 	};	
+	console.log(pixelColor.val());
 });
