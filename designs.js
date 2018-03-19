@@ -17,9 +17,9 @@ function makeGrid() {
 	let inputHeightVal = inputHeight.val();
 	let inputWeightVal = inputWeight.val();
 	for (var height = 0; height < inputHeightVal; height++){
-		canvas.append('<tr id=\"row'+height+'\"></li>');
+		canvas.append('<tr class=\"grid-row\"></li>');
 		for (var weight = 0; weight < inputWeightVal; weight++){
-			$('#row'+height).append('<td>hi</td>');
+			$('.grid-row').last().append('<td>hi</td>');
 		};
 	};
 };
