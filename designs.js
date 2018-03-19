@@ -15,7 +15,7 @@ function makeGrid() {
 	for (var height = 0; height < inputHeightVal; height++){
 		canvas.append('<tr class=\"grid-row\"></li>');
 		for (var weight = 0; weight < inputWeightVal; weight++){
-			$('.grid-row').last().append('<td class=\"grid-cell\" bgcolor=\"white\">hi</td>');
+			$('.grid-row').last().append('<td class=\"grid-cell\" bgcolor=\"white\"></td>');
 		};
 	};
 };
@@ -33,5 +33,4 @@ canvas.on("click",".grid-cell",function(event) {
 	} else {
 		currentCell.attr('bgcolor','white');
 	};	
-	console.log(pixelColor.val());
 });
