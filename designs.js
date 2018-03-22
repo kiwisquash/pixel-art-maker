@@ -1,7 +1,7 @@
 // Define a bunch of constants
-const submit = $('#submitButton'); //submit button
-const inputWeight = $('#inputWeight'); // contains value of width
-const inputHeight = $('#inputHeight'); // contains value of height
+const sizePicker = $('#sizePicker'); //submit button
+const inputHeight = $('#inputHeight');// contains value of width
+const inputWeight = $('#inputWeight');// contains value of height
 const canvas = $('#pixelCanvas'); // container for the grid
 const pixelColor = $('#colorPicker'); // container for user chosen color 
 
@@ -30,7 +30,7 @@ function makeGrid() {
 	};
 };
 // Submit button creates grid
-submit.on('click',function(evt) {
+sizePicker.submit(function(evt) {
 	evt.preventDefault(); // Prevents the input field from getting reset
 	makeGrid();
 });
